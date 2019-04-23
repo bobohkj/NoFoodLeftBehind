@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:nofoodleftbehind/Theme/theme.dart' as Theme;
-import 'HomePage.dart';
-
+import 'CheckFood.dart';
 class LoginPage extends StatefulWidget {
   @override
   _LoginPageState createState() => _LoginPageState();
@@ -86,7 +85,7 @@ class _LoginPageState extends State<LoginPage> {
 void login(String email, String password, BuildContext context) {
   Navigator.of(context).pushAndRemoveUntil(
       new MaterialPageRoute(
-        builder: (context) => new HomePage(Name: email,),
+        builder: (context) => new CheckFoodPage(name: email,),
       ),
       (route) => route == null);
 }

@@ -21,7 +21,7 @@ class _HomePageState extends State<HomePage> {
   @override
   void initState() {
     super.initState();
-    name = (name.length==0) ? 'unknown' : name;
+    name = (name.length == 0) ? 'unknown' : name;
     imagelist = [
       new FoodCard(
           image: Image.asset(
@@ -40,9 +40,11 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(
-          'NO FOOD LEFT\nBEHIND',
-          textAlign: TextAlign.center,
+        title: Center(
+          child: Text(
+            'NO FOOD LEFT\nBEHIND',
+            textAlign: TextAlign.center,
+          ),
         ),
         backgroundColor: Theme.Colors.loginpagebackground,
       ),
